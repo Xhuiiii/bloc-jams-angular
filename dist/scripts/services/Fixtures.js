@@ -7,7 +7,7 @@
             artist: 'Pablo Picasso',
             label: 'Cubism',
             year: '1881',
-            albumArtUrl: '/assets/album_covers/01.png',
+            albumArtUrl: '/assets/images/album_covers/01.png',
             songs:[
                 {title: 'Blue', duration: 161.71, audioUrl: '/assets/music/bloc_jams_music/blue'},
                 {title: 'Green', duration: 103.96, audioUrl: '/assets/music/bloc_jams_music/green'},
@@ -22,7 +22,7 @@
             artist: 'Guglielmo Marconi',
             label: 'EM',
             year: '1909',
-            albumArtUrl: '/assets/album_covers/20.png',
+            albumArtUrl: '/assets/images/album_covers/20.png',
             songs:[
                 {title: 'Hello Operator?', duration: '1:01'},
                 {title: 'Ring, ring, ring', duration: '5:01'},
@@ -37,7 +37,7 @@
             artist: 'Justin Bieber',
             label: 'DJ',
             year: '2015',
-            albumArtUrl: '/assets/album_covers/02.png',
+            albumArtUrl: '/assets/images/album_covers/02.png',
             songs:[
                 {title: 'Mark my words', duration: '5:02'},
                 {title: 'Sorry', duration: '3:04'},
@@ -53,15 +53,15 @@
         };
         
         Fixtures.getCollection = function(numberOfAlbums){
-            this.albums = [];
+            var albums = [];
             for(var i = 0; i < numberOfAlbums; i++){
-                this.albums[i] = albumPicasso;
+                albums.push(albumPicasso);
             }
-            return this.albums;
+            return albums;
         };
         
         return Fixtures;
-    }
+    };
     
     angular
         .module('blocJams')
